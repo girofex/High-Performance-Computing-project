@@ -1,0 +1,100 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.10.0 Build 20230609_000000
+
+Compiler options: -std=c99 -O3 -qopt-report=5 -qopt-report-phase=vec -DNOALIAS -o MatVector
+
+Begin optimization report for: matvec(int, int, double (*)[*], double *__restrict__, double *)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at Multiply.c(45,2)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Multiply.c(55,3)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at Multiply.c(55,3)
+      remark #15389: vectorization support: reference a[i][j] has unaligned access   [ Multiply.c(56,12) ]
+      remark #15388: vectorization support: reference x[j] has aligned access   [ Multiply.c(56,22) ]
+      remark #15388: vectorization support: reference a[i][j] has aligned access   [ Multiply.c(56,12) ]
+      remark #15388: vectorization support: reference x[j] has aligned access   [ Multiply.c(56,22) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.809
+      remark #15355: vectorization support: *(b+i*8) is double type reduction   [ Multiply.c(56,4) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 20 
+      remark #15477: vector cost: 8.500 
+      remark #15478: estimated potential speedup: 2.260 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at Multiply.c(55,3)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at Multiply.c(55,3)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference a[i][j] has unaligned access   [ Multiply.c(56,12) ]
+      remark #15388: vectorization support: reference x[j] has aligned access   [ Multiply.c(56,22) ]
+      remark #15389: vectorization support: reference a[i][j] has unaligned access   [ Multiply.c(56,12) ]
+      remark #15388: vectorization support: reference x[j] has aligned access   [ Multiply.c(56,22) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+      remark #15305: vectorization support: vector length 2
+      remark #15309: vectorization support: normalized vectorization overhead 2.077
+      remark #15355: vectorization support: *(b+i*8) is double type reduction   [ Multiply.c(56,4) ]
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 10 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 2.380 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+LOOP END
+
+LOOP BEGIN at Multiply.c(45,2)
+<Remainder>
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at Multiply.c(55,3)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at Multiply.c(55,3)
+      remark #15388: vectorization support: reference a[i][j] has aligned access   [ Multiply.c(56,12) ]
+      remark #15388: vectorization support: reference x[j] has aligned access   [ Multiply.c(56,22) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.031
+      remark #15355: vectorization support: *(b+i*8) is double type reduction   [ Multiply.c(56,4) ]
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 10 
+      remark #15477: vector cost: 4.000 
+      remark #15478: estimated potential speedup: 2.380 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at Multiply.c(55,3)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at Multiply.c(55,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+===========================================================================
