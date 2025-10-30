@@ -1,3 +1,9 @@
+/*The following code solves a 2-D Laplace equation by using a relaxation scheme.
+The exercise is solved in 2 steps:
+3.1 : Parallelize the code by using OpenMP directives. Work on the most computationally intensive loop.
+3.2 : Try to include also the while loop in the parallel region
+*/
+
 // solves 2-D Laplace equation using a relaxation scheme
 #define MAX(A,B) (((A) > (B)) ? (A) : (B))
 
@@ -7,9 +13,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#ifdef _OPENMP
-#include <omp.h>
-#endif
 
 int main() {
    
@@ -19,6 +22,7 @@ int main() {
    int itemsread;
    FILE *fout;
 
+   //E.g. 1000,1000,1e-6 
    printf("Enter mesh size, max iterations and tolerance: ");
    itemsread = scanf("%u ,%u ,%lf", &n, &maxIter, &tol);
 
@@ -49,7 +53,6 @@ int main() {
       ++iter;
       var = 0.0;
       for (i=1; i<=n; ++i) {
-        #pragma omp parallel for private(j)
          for (j=1; j<=n; ++j) {         
             Tnew[i*n2+j] = 0.25*( T[(i-1)*n2+j] + T[(i+1)*n2+j] 
                                 + T[i*n2+(j-1)] + T[i*n2+(j+1)] );
