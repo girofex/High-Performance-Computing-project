@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <cuda.h>
+#include <sys/time.h>
 
 // Simple define to index into a 1D array from 2D space
 #define I2D(num, c, r) ((r)*(num)+(c))
@@ -12,7 +13,7 @@
  * `step_kernel_ref` below. Accelerate it to run as a CUDA kernel.
  */
 
-void step_kernel_mod(int ni, int nj, float fact, float* temp_in, float* temp_out)
+void step_kernel_ref(int ni, int nj, float fact, float* temp_in, float* temp_out)
 {
   int i00, im10, ip10, i0m1, i0p1;
   float d2tdx2, d2tdy2;
@@ -39,7 +40,7 @@ void step_kernel_mod(int ni, int nj, float fact, float* temp_in, float* temp_out
   }
 }
 
-__global__ void step_kernel_ref(int ni, int nj, float fact, float* temp_in, float* temp_out)
+__global__ void step_kernel_mod(int ni, int nj, float fact, float* temp_in, float* temp_out)
 {
   int i00, im10, ip10, i0m1, i0p1;
   float d2tdx2, d2tdy2;
@@ -80,8 +81,7 @@ int main()
   const int nj = 1000;
   float tfac = 8.418e-5; // thermal diffusivity of silver
 
-  dim3 threads(1000);
-  dim3 blocks(I2D);
+  struct timeval t1, t2;
 
   float *temp1_ref, *temp2_ref, *temp1, *temp2, *temp_tmp;
 
@@ -99,7 +99,7 @@ int main()
 
   // Execute the CPU-only reference version
   for (istep=0; istep < nstep; istep++) {
-    step_kernel_ref<<<blocks, threads>>>(ni, nj, tfac, temp1_ref, temp2_ref);
+    step_kernel_ref(ni, nj, tfac, temp1_ref, temp2_ref);
 
     // swap the temperature pointers
     temp_tmp = temp1_ref;
@@ -107,15 +107,37 @@ int main()
     temp2_ref= temp_tmp;
   }
 
+  float *temp1_ref_dev, *temp2_ref_dev, *temp1_dev, *temp2_dev;
+  cudaMalloc((void**)&temp1_ref_dev, size);
+  cudaMalloc((void**)&temp2_ref_dev, size);
+  cudaMalloc((void**)&temp1_dev, size);
+  cudaMalloc((void**)&temp1_dev, size);
+
+  gettimeofday(&t1, 0);
+
+  cudaMemcpy(temp1_ref_dev, temp1_ref, size, cudaMemcpyHostToDevice);
+  cudaMemcpy(temp2_ref_dev, temp2_ref, size, cudaMemcpyHostToDevice);
+  cudaMemcpy(temp1_dev, temp1, size, cudaMemcpyHostToDevice);
+  cudaMemcpy(temp2_dev, temp2, size, cudaMemcpyHostToDevice);
+
+  dim3 block(512);
+  dim3 grid((ni*nj-1)/block.x + 1);
+
   // Execute the modified version using same data
   for (istep=0; istep < nstep; istep++) {
-    step_kernel_mod(ni, nj, tfac, temp1, temp2);
+    step_kernel_mod<<<block, grid>>>(ni, nj, tfac, temp1, temp2);
 
     // swap the temperature pointers
     temp_tmp = temp1;
     temp1 = temp2;
     temp2= temp_tmp;
   }
+
+  cudaMemcpy(temp1, temp1_dev, size, cudaMemcpyDeviceToHost);
+  cudaMemcpy(temp1_ref, temp1_ref_dev, size, cudaMemcpyDeviceToHost);
+
+  cudaDeviceSynchronize();
+  gettimeofday(&t2, 0);
 
   float maxError = 0;
   // Output should always be stored in the temp1 and temp1_ref at this point
@@ -128,6 +150,11 @@ int main()
     printf("Problem! The Max Error of %.5f is NOT within acceptable bounds.\n", maxError);
   else
     printf("The Max Error of %.5f is within acceptable bounds.\n", maxError);
+
+  cudaFree(temp1_dev);
+  cudaFree(temp1_ref_dev);
+  cudaFree(temp2_dev);
+  cudaFree(temp2_ref_dev);
 
   free( temp1_ref );
   free( temp2_ref );
