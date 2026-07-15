@@ -1,0 +1,68 @@
+Global optimization report for : main
+
+LOOP BEGIN at matrixmult.c (19, 6)
+    remark #25567: 2 loops have been collapsed
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+LOOP END
+
+LOOP BEGIN at matrixmult.c (25, 3)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matrixmult.c (26, 6)
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at matrixmult.c (27, 9)
+            remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at matrixmult.c (25, 3)
+                remark #25566: blocked by 64
+                remark #25540: Loop unrolled and jammed by 4
+                remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at matrixmult.c (26, 6)
+                    remark #25566: blocked by 64
+                    remark #25540: Loop unrolled and jammed by 4
+                    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                    LOOP BEGIN at matrixmult.c (27, 9)
+                        remark #25566: blocked by 64
+                        remark #25563: Load hoisted out of the loop
+                        remark #15300: LOOP WAS VECTORIZED
+                        remark #15305: vectorization support: vector length 4
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 36
+                    LOOP END
+
+                    LOOP BEGIN at matrixmult.c (27, 9)
+                    <Remainder loop for vectorization>
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 36
+                    LOOP END
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmult.c (39, 3)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matrixmult.c (40, 6)
+        remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+        remark #25438: Loop unrolled without remainder by 8
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+COMPILE FUNC: main
+   -> DELETE: fputc ld-temp.o (43,6)
+   -> DELETE: fprintf ld-temp.o (41,9)
+   -> llvm.x86.sse.sfence ld-temp.o (18,3)
+
+---- End Inlining Report ------

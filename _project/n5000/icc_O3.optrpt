@@ -1,0 +1,128 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1] matrixmult.c(8,32)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at matrixmult.c(18,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matrixmult.c(19,6)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at matrixmult.c(19,6)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at matrixmult.c(19,6)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at matrixmult.c(19,6)
+   <Remainder loop for vectorization>
+      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmult.c(25,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matrixmult.c(25,3)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at matrixmult.c(25,3)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at matrixmult.c(25,3)
+            remark #25442: blocked by 128   (pre-vector) 
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at matrixmult.c(26,6)
+               remark #25442: blocked by 128   (pre-vector) 
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matrixmult.c(27,9)
+               <Peeled loop for vectorization>
+               LOOP END
+
+               LOOP BEGIN at matrixmult.c(27,9)
+                  remark #25442: blocked by 128   (pre-vector) 
+                  remark #15300: LOOP WAS VECTORIZED
+               LOOP END
+
+               LOOP BEGIN at matrixmult.c(27,9)
+               <Alternate Alignment Vectorized Loop>
+               LOOP END
+
+               LOOP BEGIN at matrixmult.c(27,9)
+               <Remainder loop for vectorization>
+                  remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmult.c(39,3)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (41:9) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (43:6)
+
+   LOOP BEGIN at matrixmult.c(40,6)
+      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matrixmult.c(41,9) ]
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+matrixmult.c(8,32):remark #34051: REGISTER ALLOCATION : [main] matrixmult.c:8
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :     195
+            Global    :      86
+            Local     :     109
+        Regenerable   :      34
+        Spilled       :      29
+        
+    Routine stack
+        Variables     :       4 bytes*
+            Reads     :       2 [3.01e-11 ~ 0.0%]
+            Writes    :       2 [3.01e-11 ~ 0.0%]
+        Spills        :     192 bytes*
+            Reads     :      34 [7.54e+00 ~ 7.5%]
+            Writes    :      30 [7.15e-07 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
