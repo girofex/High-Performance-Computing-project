@@ -1,0 +1,307 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.10.0 Build 20230609_000000
+
+Compiler options: -fast -qopt-report=5 -qopt-report-phase=vec -o icc_fast
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Vector optimizations [vec]
+
+
+LOOP BEGIN at matrixmul.c(19,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matrixmul.c(20,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at matrixmul.c(20,9)
+      remark #15389: vectorization support: reference a[i][j] has unaligned access   [ matrixmul.c(22,13) ]
+      remark #15389: vectorization support: reference b[i][j] has unaligned access   [ matrixmul.c(23,13) ]
+      remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(24,13) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.308
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15451: unmasked unaligned unit stride stores: 2 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 9 
+      remark #15477: vector cost: 3.250 
+      remark #15478: estimated potential speedup: 2.750 
+      remark #15488: --- end vector cost summary ---
+   LOOP END
+
+   LOOP BEGIN at matrixmul.c(20,9)
+   <Remainder loop for vectorization>
+      remark #15389: vectorization support: reference a[i][j] has unaligned access   [ matrixmul.c(22,13) ]
+      remark #15389: vectorization support: reference b[i][j] has unaligned access   [ matrixmul.c(23,13) ]
+      remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(24,13) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 1.267
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+   LOOP END
+
+   LOOP BEGIN at matrixmul.c(20,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmul.c(27,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matrixmul.c(27,5)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at matrixmul.c(27,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at matrixmul.c(27,5)
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at matrixmul.c(28,9)
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Peeled loop for vectorization>
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15381: vectorization support: unaligned access used inside loop body
+                  remark #15305: vectorization support: vector length 4
+                  remark #15309: vectorization support: normalized vectorization overhead 0.328
+                  remark #15300: LOOP WAS VECTORIZED
+                  remark #15442: entire loop may be executed in remainder
+                  remark #15448: unmasked aligned unit stride loads: 4 
+                  remark #15449: unmasked aligned unit stride stores: 16 
+                  remark #15450: unmasked unaligned unit stride loads: 4 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 133 
+                  remark #15477: vector cost: 29.000 
+                  remark #15478: estimated potential speedup: 4.560 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Remainder loop for vectorization>
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15381: vectorization support: unaligned access used inside loop body
+                  remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                  remark #15305: vectorization support: vector length 2
+                  remark #15309: vectorization support: normalized vectorization overhead 0.557
+                  remark #15442: entire loop may be executed in remainder
+               LOOP END
+            LOOP END
+
+            LOOP BEGIN at matrixmul.c(28,9)
+            <Remainder>
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Peeled loop for vectorization>
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15381: vectorization support: unaligned access used inside loop body
+                  remark #15305: vectorization support: vector length 4
+                  remark #15309: vectorization support: normalized vectorization overhead 0.586
+                  remark #15300: LOOP WAS VECTORIZED
+                  remark #15442: entire loop may be executed in remainder
+                  remark #15448: unmasked aligned unit stride loads: 4 
+                  remark #15449: unmasked aligned unit stride stores: 4 
+                  remark #15450: unmasked unaligned unit stride loads: 1 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 33 
+                  remark #15477: vector cost: 7.250 
+                  remark #15478: estimated potential speedup: 4.520 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Remainder loop for vectorization>
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference c[i][j] has unaligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15381: vectorization support: unaligned access used inside loop body
+                  remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                  remark #15305: vectorization support: vector length 2
+                  remark #15309: vectorization support: normalized vectorization overhead 0.820
+                  remark #15442: entire loop may be executed in remainder
+               LOOP END
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at matrixmul.c(27,5)
+         <Remainder>
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at matrixmul.c(28,9)
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Peeled loop for vectorization>
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15388: vectorization support: reference c[i][j] has aligned access   [ matrixmul.c(30,17) ]
+                  remark #15389: vectorization support: reference b[k][j] has unaligned access   [ matrixmul.c(30,38) ]
+                  remark #15381: vectorization support: unaligned access used inside loop body
+                  remark #15305: vectorization support: vector length 4
+                  remark #15309: vectorization support: normalized vectorization overhead 1.750
+                  remark #15300: LOOP WAS VECTORIZED
+                  remark #15442: entire loop may be executed in remainder
+                  remark #15448: unmasked aligned unit stride loads: 1 
+                  remark #15449: unmasked aligned unit stride stores: 1 
+                  remark #15450: unmasked unaligned unit stride loads: 1 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 8 
+                  remark #15477: vector cost: 2.000 
+                  remark #15478: estimated potential speedup: 3.970 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Remainder loop for vectorization>
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmul.c(40,5)
+   remark #15382: vectorization support: call to function fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matrixmul.c(44,13) ]
+   remark #15382: vectorization support: call to function fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matrixmul.c(46,9) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (44:13) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (46:9)
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (46:9) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (44:13)
+
+   LOOP BEGIN at matrixmul.c(42,9)
+      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matrixmul.c(44,13) ]
+   LOOP END
+LOOP END
+===========================================================================
