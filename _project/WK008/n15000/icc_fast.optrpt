@@ -1,0 +1,189 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: disabled
+  -inline-max-per-compile: disabled
+
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1] matrixmul.c(9,1)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at matrixmul.c(19,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matrixmul.c(20,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at matrixmul.c(20,9)
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at matrixmul.c(20,9)
+   <Remainder loop for vectorization>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at matrixmul.c(20,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmul.c(27,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matrixmul.c(27,5)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at matrixmul.c(27,5)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at matrixmul.c(27,5)
+            remark #25442: blocked by 128   (pre-vector) 
+            remark #25440: unrolled and jammed by 4   (pre-vector) 
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at matrixmul.c(28,9)
+               remark #25442: blocked by 128   (pre-vector) 
+               remark #25440: unrolled and jammed by 4   (pre-vector) 
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Peeled loop for vectorization>
+                  remark #25456: Number of Array Refs Scalar Replaced In Loop: 36
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+                  remark #25442: blocked by 128   (pre-vector) 
+                  remark #15300: LOOP WAS VECTORIZED
+                  remark #25456: Number of Array Refs Scalar Replaced In Loop: 36
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Remainder loop for vectorization>
+                  remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                  remark #25456: Number of Array Refs Scalar Replaced In Loop: 36
+               LOOP END
+            LOOP END
+
+            LOOP BEGIN at matrixmul.c(28,9)
+            <Remainder>
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Peeled loop for vectorization>
+                  remark #25456: Number of Array Refs Scalar Replaced In Loop: 3
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+                  remark #15300: LOOP WAS VECTORIZED
+                  remark #25456: Number of Array Refs Scalar Replaced In Loop: 3
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Remainder loop for vectorization>
+                  remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                  remark #25456: Number of Array Refs Scalar Replaced In Loop: 3
+               LOOP END
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at matrixmul.c(27,5)
+         <Remainder>
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at matrixmul.c(28,9)
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Peeled loop for vectorization>
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+                  remark #15300: LOOP WAS VECTORIZED
+               LOOP END
+
+               LOOP BEGIN at matrixmul.c(29,13)
+               <Remainder loop for vectorization>
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmul.c(40,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (44:13) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (46:9)
+
+   LOOP BEGIN at matrixmul.c(42,9)
+      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matrixmul.c(44,13) ]
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+matrixmul.c(9,1):remark #34051: REGISTER ALLOCATION : [main] matrixmul.c:9
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     417
+            Global    :     173
+            Local     :     244
+        Regenerable   :      35
+        Spilled       :      74
+        
+    Routine stack
+        Variables     :       4 bytes*
+            Reads     :       2 [3.55e-13 ~ 0.0%]
+            Writes    :       2 [3.55e-13 ~ 0.0%]
+        Spills        :     904 bytes*
+            Reads     :     123 [8.98e+00 ~ 9.0%]
+            Writes    :      90 [2.13e-03 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Profile guided optimizations [pgo]
+
+
+
+Profile feedback used a statically estimated profile for the following routines:
+
+  File: matrixmul.c
+        main(int, char **)[Line     9]
+
+
+  0 out of 1 routine(s) used training profile data for PGO feedback
+  0 out of 1 routine(s) were unable to use training profile data for PGO feedback
+  0 out of 1 routine(s) were unable to find training profile data for PGO feedback
+  1 out of 1 routine(s) used a static estimate profile for PGO feedback
+
+
+
