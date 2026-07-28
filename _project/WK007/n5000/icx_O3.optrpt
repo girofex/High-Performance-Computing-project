@@ -1,0 +1,49 @@
+Global optimization report for : main
+
+LOOP BEGIN at matrixmul.c (20, 9)
+    remark #25567: 2 loops have been collapsed
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25438: Loop unrolled without remainder by 8
+LOOP END
+
+LOOP BEGIN at matrixmul.c (27, 5)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matrixmul.c (28, 9)
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at matrixmul.c (29, 13)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 2
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at matrixmul.c (40, 5)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matrixmul.c (42, 9)
+        remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+        remark #25438: Loop unrolled without remainder by 8
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: fwrite
+
+COMPILE FUNC: main
+   -> DELETE: malloc matrixmul.c (15,22)
+   -> DELETE: malloc matrixmul.c (17,22)
+   -> DELETE: free matrixmul.c (51,5)
+   -> DELETE: fprintf matrixmul.c (46,9)
+   -> DELETE: fprintf matrixmul.c (44,13)
+   -> DELETE: fputc matrixmul.c (46,9)
+
+---- End Inlining Report ------
