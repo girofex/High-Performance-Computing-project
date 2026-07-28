@@ -1,0 +1,484 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 12, Column: 11 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 14, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 15, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 16, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 32, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 34, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 38, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 46, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 48, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 52, Column: 9 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 67 }
+Function:        main
+Args:
+  - Callee:          difftime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 3 }
+Function:        main
+Args:
+  - Callee:          printf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 43, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 41, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 12, Column: 11 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 14, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 15, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 16, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 32, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 34, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 38, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 46, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 48, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 52, Column: 9 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 67 }
+Function:        main
+Args:
+  - Callee:          difftime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 3 }
+Function:        main
+Args:
+  - Callee:          printf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 43, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 41, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: matrixmul.c, Line: 20, Column: 9 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: matrixmul.c, Line: 20, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: matrixmul.c, Line: 41, Column: 29 }
+Function:        main
+Args:
+  - String:          'hoisting '
+  - Inst:            zext
+    DebugLoc:        { File: matrixmul.c, Line: 41, Column: 29 }
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStridedStore
+DebugLoc:        { File: matrixmul.c, Line: 22, Column: 17 }
+Function:        main
+Args:
+  - String:          'Transformed loop-strided store in '
+  - Function:        main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' function into a call to '
+  - NewFunction:     llvm.memset.p0.i64
+  - String:          '() intrinsic'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...
+--- !Passed
+Pass:            loop-idiom
+Name:            ProcessLoopStridedStore
+DebugLoc:        { File: matrixmul.c, Line: 22, Column: 17 }
+Function:        main
+Args:
+  - String:          'Transformed loop-strided store in '
+  - Function:        main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' function into a call to '
+  - NewFunction:     llvm.memset.p0.i64
+  - String:          '() intrinsic'
+  - FromBlock:       ''
+  - ToBlock:         ''
+...

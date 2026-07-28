@@ -1,0 +1,1026 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 12, Column: 11 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 14, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 15, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 16, Column: 22 }
+Function:        main
+Args:
+  - Callee:          calloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 32, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 34, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 38, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 46, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 48, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 52, Column: 9 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 67 }
+Function:        main
+Args:
+  - Callee:          difftime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 3 }
+Function:        main
+Args:
+  - Callee:          printf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 43, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 41, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 12, Column: 11 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 14, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 15, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 16, Column: 22 }
+Function:        main
+Args:
+  - Callee:          calloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 32, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fopen
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 34, Column: 6 }
+Function:        main
+Args:
+  - Callee:          perror
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 38, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 46, Column: 3 }
+Function:        main
+Args:
+  - Callee:          fclose
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 48, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 49, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 50, Column: 3 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 52, Column: 9 }
+Function:        main
+Args:
+  - Callee:          time
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 67 }
+Function:        main
+Args:
+  - Callee:          difftime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 54, Column: 3 }
+Function:        main
+Args:
+  - Callee:          printf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 43, Column: 6 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matrixmul.c, Line: 41, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            PartialUnrolled
+DebugLoc:        { File: matrixmul.c, Line: 19, Column: 6 }
+Function:        main
+Args:
+  - String:          'unrolled loop by a factor of '
+  - UnrollCount:     '10'
+...
+--- !Passed
+Pass:            TTI
+Name:            DontUnroll
+DebugLoc:        { File: matrixmul.c, Line: 39, Column: 3 }
+Function:        main
+Args:
+  - String:          'advising against unrolling the loop because it contains a '
+  - Call:            call
+    DebugLoc:        { File: matrixmul.c, Line: 41, Column: 9 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 40, Column: 6 }
+Function:        main
+Args:
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.710176e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 39, Column: 3 }
+Function:        main
+Args:
+  - NumVRCopies:     '9'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.740294e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 27, Column: 9 }
+Function:        main
+Args:
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.684391e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '4'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.073756e+09'
+  - String:          ' total folded reloads cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 26, Column: 6 }
+Function:        main
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.194360e+07'
+  - String:          ' total spills cost '
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.684391e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '4'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.073756e+09'
+  - String:          ' total folded reloads cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 25, Column: 3 }
+Function:        main
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.194360e+07'
+  - String:          ' total spills cost '
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.684391e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.074018e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.864426e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 27, Column: 9 }
+Function:        main
+Args:
+  - NumSpills:       '5'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.194360e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '1'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.276843e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '3'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.684882e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.074018e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.192111e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 26, Column: 6 }
+Function:        main
+Args:
+  - NumSpills:       '8'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.194668e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '1'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.276843e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '6'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.684913e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.074018e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.192111e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 25, Column: 3 }
+Function:        main
+Args:
+  - NumSpills:       '10'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.194674e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '2'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.280043e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '8'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.684914e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.074018e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '3'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.192111e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 19, Column: 6 }
+Function:        main
+Args:
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.132353e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: matrixmul.c, Line: 8, Column: 1 }
+Function:        main
+Args:
+  - NumSpills:       '16'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.194674e+07'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '3'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.280143e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '14'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.684914e+08'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '5'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.074018e+09'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '24'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.269825e+05'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+Function:        main
+Args:
+  - NumStackBytes:   '8888'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '45'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 19, Column: 17 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 12, Column: 11 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '27'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 21, Column: 17 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 20, Column: 17 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 21, Column: 17 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 18, Column: 3 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '19'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 25, Column: 3 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '12'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 26, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 18, Column: 3 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 18, Column: 3 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 26, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 18, Column: 3 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 18, Column: 3 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 28, Column: 23 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '39'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 28, Column: 31 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 27, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 32, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 32, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 41, Column: 29 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '43'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 43, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 46, Column: 3 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '17'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 57, Column: 1 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matrixmul.c, Line: 34, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: matrixmul.c, Line: 8, Column: 0 }
+Function:        main
+Args:
+  - NumInstructions: '359'
+  - String:          ' instructions in function'
+...

@@ -1,0 +1,14 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: fwrite
+
+COMPILE FUNC: main
+   -> DELETE: malloc matrixmul.c (16,22)
+   -> DELETE: fprintf matrixmul.c (43,6)
+
+---- End Inlining Report ------
