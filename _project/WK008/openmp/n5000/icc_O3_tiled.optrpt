@@ -1,0 +1,149 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1] matmul_tiled.c(12,1)
+  -> INLINE: (32,21) min_int(int, int)
+  -> INLINE: (34,25) min_int(int, int)
+  -> INLINE: (36,29) min_int(int, int)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at matmul_tiled.c(31,5)
+remark #16204: OpenMP multithreaded code generation for SINGLE was successful
+OpenMP Construct at matmul_tiled.c(29,5)
+remark #16201: OpenMP DEFINED REGION WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at matmul_tiled.c(22,5)
+   remark #25084: Preprocess Loopnests: Moving Out Store    [ matmul_tiled.c(22,24) ]
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matmul_tiled.c(23,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at matmul_tiled.c(23,9)
+      remark #25084: Preprocess Loopnests: Moving Out Store    [ matmul_tiled.c(23,28) ]
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at matmul_tiled.c(23,9)
+   <Alternate Alignment Vectorized Loop>
+   LOOP END
+
+   LOOP BEGIN at matmul_tiled.c(23,9)
+   <Remainder loop for vectorization>
+      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matmul_tiled.c(51,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (53:13) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (54:9)
+
+   LOOP BEGIN at matmul_tiled.c(52,9)
+      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matmul_tiled.c(53,13) ]
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matmul_tiled.c(41,47)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matmul_tiled.c(31,5)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at matmul_tiled.c(33,9)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at matmul_tiled.c(35,13)
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at matmul_tiled.c(37,17)
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at matmul_tiled.c(38,21)
+                  remark #15542: loop was not vectorized: inner loop was already vectorized
+
+                  LOOP BEGIN at matmul_tiled.c(40,25)
+                  <Peeled loop for vectorization>
+                  LOOP END
+
+                  LOOP BEGIN at matmul_tiled.c(40,25)
+                     remark #15300: LOOP WAS VECTORIZED
+                  LOOP END
+
+                  LOOP BEGIN at matmul_tiled.c(40,25)
+                  <Alternate Alignment Vectorized Loop>
+                  LOOP END
+
+                  LOOP BEGIN at matmul_tiled.c(40,25)
+                  <Remainder loop for vectorization>
+                     remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+                  LOOP END
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+matmul_tiled.c(12,1):remark #34051: REGISTER ALLOCATION : [main] matmul_tiled.c:12
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :     326
+            Global    :     113
+            Local     :     213
+        Regenerable   :     114
+        Spilled       :      35
+        
+    Routine stack
+        Variables     :      72 bytes*
+            Reads     :      10 [3.65e-07 ~ 0.0%]
+            Writes    :      12 [4.19e-07 ~ 0.0%]
+        Spills        :     320 bytes*
+            Reads     :      59 [2.31e-01 ~ 0.2%]
+            Writes    :      45 [4.70e-02 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: min_int(int, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+DEAD STATIC FUNCTION: (min_int(int, int)) matmul_tiled.c(9,41)
+
+===========================================================================
