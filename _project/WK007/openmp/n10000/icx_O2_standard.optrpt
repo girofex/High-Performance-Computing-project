@@ -1,0 +1,75 @@
+Global optimization report for : main
+
+LOOP BEGIN at matmul_standard.c (20, 9)
+    remark #25567: 2 loops have been collapsed
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25438: Loop unrolled without remainder by 8
+LOOP END
+
+LOOP BEGIN at matmul_standard.c (41, 5)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matmul_standard.c (43, 9)
+        remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+        remark #25438: Loop unrolled without remainder by 8
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : main.extracted
+
+LOOP BEGIN at matmul_standard.c (27, 5)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+
+    LOOP BEGIN at matmul_standard.c (29, 9)
+        remark #15319: Loop was not vectorized: novector directive used
+
+        LOOP BEGIN at matmul_standard.c (30, 13)
+            remark #15319: Loop was not vectorized: novector directive used
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at matmul_standard.c (27, 5)
+<Multiversioned v1>
+    remark: OpenMP: Outlined parallel loop
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matmul_standard.c (29, 9)
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at matmul_standard.c (30, 13)
+            remark #25563: Load hoisted out of the loop
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 2
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: fwrite
+
+DEAD STATIC FUNC: llvm.directive.region.entry
+
+DEAD STATIC FUNC: llvm.directive.region.exit
+
+COMPILE FUNC: main
+   -> DELETE: malloc matmul_standard.c (17,22)
+   -> DELETE: llvm.directive.region.entry matmul_standard.c (27,5)
+   -> DELETE: llvm.directive.region.exit matmul_standard.c (27,5)
+   -> DELETE: fprintf matmul_standard.c (47,9)
+   -> DELETE: fprintf matmul_standard.c (45,13)
+   -> DELETE: fputc matmul_standard.c (47,9)
+
+COMPILE FUNC: main.extracted
+
+---- End Inlining Report ------
