@@ -1,0 +1,92 @@
+Global optimization report for : main
+
+LOOP BEGIN at matmul_tiled.c (23, 9)
+    remark #25567: 2 loops have been collapsed
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25438: Loop unrolled without remainder by 8
+LOOP END
+
+LOOP BEGIN at matmul_tiled.c (58, 5)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matmul_tiled.c (60, 9)
+        remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+        remark #25438: Loop unrolled without remainder by 8
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : main.extracted
+
+LOOP BEGIN at matmul_tiled.c (30, 5)
+
+    LOOP BEGIN at matmul_tiled.c (30, 5)
+        remark: OpenMP: Outlined parallel loop
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at matmul_tiled.c (34, 9)
+            remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at matmul_tiled.c (37, 13)
+                remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at matmul_tiled.c (40, 17)
+                    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                    LOOP BEGIN at matmul_tiled.c (41, 21)
+                        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                        LOOP BEGIN at matmul_tiled.c (43, 25)
+                            remark #15300: LOOP WAS VECTORIZED
+                            remark #15305: vectorization support: vector length 2
+                        LOOP END
+
+                        LOOP BEGIN at matmul_tiled.c (43, 25)
+                        <Remainder loop for vectorization>
+                        LOOP END
+                    LOOP END
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: fwrite
+
+DEAD STATIC FUNC: llvm.directive.region.entry
+
+DEAD STATIC FUNC: llvm.directive.region.exit
+
+DEAD STATIC FUNC: min_int
+
+COMPILE FUNC: main
+   -> DELETE: malloc matmul_tiled.c (20,22)
+   -> DELETE: llvm.directive.region.entry matmul_tiled.c (30,5)
+   -> INLINE: min_int matmul_tiled.c (32,21)
+      -> DELETE: llvm.smin.i32 matmul_tiled.c (9,50)
+   -> INLINE: min_int matmul_tiled.c (35,25)
+      -> DELETE: llvm.smin.i32 matmul_tiled.c (9,50)
+   -> INLINE: min_int matmul_tiled.c (38,29)
+      -> DELETE: llvm.smin.i32 matmul_tiled.c (9,50)
+   -> DELETE: llvm.directive.region.exit matmul_tiled.c (30,5)
+   -> DELETE: fprintf matmul_tiled.c (62,9)
+   -> DELETE: fprintf matmul_tiled.c (61,13)
+   -> DELETE: fputc matmul_tiled.c (62,9)
+
+COMPILE FUNC: main.extracted
+   -> DELETE: llvm.smin.i32 matmul_tiled.c (9,50)
+   -> DELETE: llvm.smin.i32 matmul_tiled.c (9,50)
+   -> DELETE: llvm.smin.i32 matmul_tiled.c (9,50)
+   -> llvm.smin.i32 matmul_tiled.c (9,50)
+   -> llvm.smin.i32 matmul_tiled.c (9,50)
+   -> llvm.smin.i32 matmul_tiled.c (9,50)
+
+---- End Inlining Report ------
