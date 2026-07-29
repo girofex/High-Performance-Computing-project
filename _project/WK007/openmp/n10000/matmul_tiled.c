@@ -1,5 +1,6 @@
 #define n 10000
 #define BLOCK_SIZE 64
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,7 +30,10 @@ int main(int argc, char **argv)
     for (i = 0; i < n; i += BLOCK_SIZE)
         for (k = 0; k < n; k += BLOCK_SIZE)
             for (j = 0; j < n; j += BLOCK_SIZE)
-                c[i][j] += a[i][k] * b[k][j];
+                for (int ii = i; ii < MIN(i + BLOCK_SIZE, n); ii++)
+                    for (int kk = k; kk < MIN(k + BLOCK_SIZE, n); kk++)
+                        for (int jj = j; jj < MIN(j + BLOCK_SIZE, n); jj++)
+                            c[ii][jj] += a[ii][kk] * b[kk][jj];
 
     FILE *f = fopen("mat-res.txt", "w");
     if (!f)
