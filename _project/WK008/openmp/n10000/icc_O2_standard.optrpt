@@ -55,7 +55,8 @@ LOOP BEGIN at matmul_standard.c(19,4)
 LOOP END
 
 LOOP BEGIN at matmul_standard.c(41,4)
-   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (45:10) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (47:7)
 
    LOOP BEGIN at matmul_standard.c(43,7)
       remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matmul_standard.c(45,10) ]

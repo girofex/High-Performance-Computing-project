@@ -19,13 +19,29 @@ LOOP END
 Global optimization report for : main.extracted
 
 LOOP BEGIN at matmul_standard.c (27, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+
+    LOOP BEGIN at matmul_standard.c (29, 7)
+        remark #15319: Loop was not vectorized: novector directive used
+
+        LOOP BEGIN at matmul_standard.c (30, 10)
+            remark #15319: Loop was not vectorized: novector directive used
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at matmul_standard.c (27, 4)
+<Multiversioned v1>
     remark: OpenMP: Outlined parallel loop
+    remark #25228: Loop multiversioned for Data Dependence
     remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
     LOOP BEGIN at matmul_standard.c (29, 7)
         remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
         LOOP BEGIN at matmul_standard.c (30, 10)
+            remark #25563: Load hoisted out of the loop
             remark #15300: LOOP WAS VECTORIZED
             remark #15305: vectorization support: vector length 2
         LOOP END

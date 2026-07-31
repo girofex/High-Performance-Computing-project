@@ -37,6 +37,13 @@ LOOP BEGIN at matmul_tiled.c (29, 5)
                         remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
                         LOOP BEGIN at matmul_tiled.c (40, 25)
+                        <Multiversioned v2>
+                            remark #15319: Loop was not vectorized: novector directive used
+                        LOOP END
+
+                        LOOP BEGIN at matmul_tiled.c (40, 25)
+                        <Multiversioned v1>
+                            remark #25228: Loop multiversioned for Data Dependence
                             remark #15300: LOOP WAS VECTORIZED
                             remark #15305: vectorization support: vector length 2
                         LOOP END
