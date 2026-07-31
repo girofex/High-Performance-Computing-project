@@ -1,0 +1,140 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: disabled
+  -inline-max-per-compile: disabled
+
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1] matmul_standard.c(9,1)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at matmul_standard.c(28,5)
+remark #16204: OpenMP multithreaded code generation for SINGLE was successful
+OpenMP Construct at matmul_standard.c(27,5)
+remark #16201: OpenMP DEFINED REGION WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at matmul_standard.c(19,5)
+   remark #25084: Preprocess Loopnests: Moving Out Store    [ matmul_standard.c(19,24) ]
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matmul_standard.c(20,9)
+   <Peeled loop for vectorization>
+   LOOP END
+
+   LOOP BEGIN at matmul_standard.c(20,9)
+      remark #25084: Preprocess Loopnests: Moving Out Store    [ matmul_standard.c(20,28) ]
+      remark #15300: LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at matmul_standard.c(20,9)
+   <Remainder loop for vectorization>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
+   LOOP END
+
+   LOOP BEGIN at matmul_standard.c(20,9)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matmul_standard.c(41,5)
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (45:13) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (47:9)
+
+   LOOP BEGIN at matmul_standard.c(43,9)
+      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matmul_standard.c(45,13) ]
+   LOOP END
+LOOP END
+
+LOOP BEGIN at matmul_standard.c(28,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at matmul_standard.c(29,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at matmul_standard.c(30,13)
+      <Peeled loop for vectorization>
+      LOOP END
+
+      LOOP BEGIN at matmul_standard.c(30,13)
+         remark #15300: LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at matmul_standard.c(30,13)
+      <Remainder loop for vectorization>
+         remark #15301: REMAINDER LOOP WAS VECTORIZED
+      LOOP END
+
+      LOOP BEGIN at matmul_standard.c(30,13)
+      <Remainder loop for vectorization>
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+matmul_standard.c(9,1):remark #34051: REGISTER ALLOCATION : [main] matmul_standard.c:9
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
+        
+    Routine temporaries
+        Total         :     266
+            Global    :      78
+            Local     :     188
+        Regenerable   :     101
+        Spilled       :       9
+        
+    Routine stack
+        Variables     :      56 bytes*
+            Reads     :       7 [5.91e-09 ~ 0.0%]
+            Writes    :      10 [1.52e-07 ~ 0.0%]
+        Spills        :     112 bytes*
+            Reads     :      24 [3.60e-07 ~ 0.0%]
+            Writes    :      19 [3.60e-07 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+    Report from: Profile guided optimizations [pgo]
+
+
+
+Profile feedback used a statically estimated profile for the following routines:
+
+  File: matmul_standard.c
+        main(int, char **)[Line     9]
+
+
+  0 out of 1 routine(s) used training profile data for PGO feedback
+  0 out of 1 routine(s) were unable to use training profile data for PGO feedback
+  0 out of 1 routine(s) were unable to find training profile data for PGO feedback
+  1 out of 1 routine(s) used a static estimate profile for PGO feedback
+
+
+
