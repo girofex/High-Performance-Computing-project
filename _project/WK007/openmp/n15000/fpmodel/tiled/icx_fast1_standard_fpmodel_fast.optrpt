@@ -19,9 +19,11 @@ COMPILE FUNC: main
    -> INLINE: min_int matmul_standard.c (32,21)
    -> INLINE: min_int matmul_standard.c (35,25)
    -> INLINE: min_int matmul_standard.c (38,29)
+   -> DELETE: llvm.fmuladd.f64 matmul_standard.c (44,37)
    -> DELETE: llvm.directive.region.exit matmul_standard.c (30,5)
    -> DELETE: fprintf matmul_standard.c (62,9)
 
 COMPILE FUNC: main.extracted
+   -> llvm.fmuladd.f64 matmul_standard.c (44,37)
 
 ---- End Inlining Report ------

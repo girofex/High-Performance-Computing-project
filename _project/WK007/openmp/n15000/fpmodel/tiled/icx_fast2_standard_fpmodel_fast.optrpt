@@ -72,8 +72,25 @@ Option Values:
   inlineoptsize-threshold: 15
 
 COMPILE FUNC: main.extracted
-   -> llvm.masked.gather.v8f64.v8p0 ld-temp.o (44,47)
-   -> llvm.vector.reduce.fadd.v8f64 ld-temp.o (44,37)
+   -> DELETE: llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> DELETE: llvm.fmuladd.f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> llvm.fmuladd.v4f64 ld-temp.o (44,37)
+   -> DELETE: llvm.fmuladd.v4f64 ld-temp.o (44,37)
 
 COMPILE FUNC: main
    -> DELETE: fputc ld-temp.o (62,9)
