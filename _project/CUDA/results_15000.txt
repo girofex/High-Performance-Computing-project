@@ -1,0 +1,5 @@
+N value: 15000
+Launching kernel with dimGrid(469, 469, 1) and dimBlock(32, 32, 1)
+Result example: c[0][0] = 90000.000000
+Time to calculate results (kernel only): 39072.910156 ms.
+Total time with I/O (H2D and D2H copies): 40334.378906 ms.
