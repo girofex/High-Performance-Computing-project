@@ -1,0 +1,22 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: fwrite
+
+DEAD STATIC FUNC: llvm.directive.region.entry
+
+DEAD STATIC FUNC: llvm.directive.region.exit
+
+COMPILE FUNC: main
+   -> DELETE: malloc matmul_standard.c (17,21)
+   -> DELETE: llvm.directive.region.entry matmul_standard.c (27,4)
+   -> DELETE: llvm.directive.region.exit matmul_standard.c (27,4)
+   -> DELETE: fprintf matmul_standard.c (47,7)
+
+COMPILE FUNC: main.extracted
+
+---- End Inlining Report ------
