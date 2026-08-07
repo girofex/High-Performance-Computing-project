@@ -8,7 +8,7 @@ Option Values:
 DEAD STATIC FUNC: fwrite
 
 COMPILE FUNC: main
-   -> DELETE: fprintf matrixmul.c (84,13)
-   -> llvm.memset.p0.i64 matrixmul.c (50,27)
+   -> DELETE: fprintf matrixmul.c (97,13)
+   -> llvm.memset.p0.i64 matrixmul.c (61,27)
 
 ---- End Inlining Report ------
