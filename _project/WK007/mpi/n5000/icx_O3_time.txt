@@ -1,1 +1,1 @@
-Time taken to multiply the matrices: 50.30 seconds.
+Time taken to multiply the matrices: 16.43 seconds.

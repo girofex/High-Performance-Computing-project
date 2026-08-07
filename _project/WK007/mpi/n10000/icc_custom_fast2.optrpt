@@ -18,115 +18,127 @@ Begin optimization report for: main(int, char **)
 
     Report from: Interprocedural optimizations [ipo]
 
-INLINE REPORT: (main(int, char **)) [1] matrixmul.c(8,1)
+INLINE REPORT: (main(int, char **)) [1] matrixmul.c(9,1)
 
 
     Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
 
 
-LOOP BEGIN at matrixmul.c(39,9)
+LOOP BEGIN at matrixmul.c(32,9)
 <Peeled loop for vectorization>
 LOOP END
 
-LOOP BEGIN at matrixmul.c(39,9)
-   remark #25420: Collapsed with loop at line 40 
+LOOP BEGIN at matrixmul.c(32,9)
+   remark #15300: LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at matrixmul.c(32,9)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at matrixmul.c(50,9)
+<Peeled loop for vectorization>
+LOOP END
+
+LOOP BEGIN at matrixmul.c(50,9)
+   remark #25420: Collapsed with loop at line 51 
    remark #15300: LOOP WAS VECTORIZED
 
-   LOOP BEGIN at matrixmul.c(40,13)
+   LOOP BEGIN at matrixmul.c(51,13)
       remark #25421: Loop eliminated in Collapsing 
 
    LOOP END
 LOOP END
 
-LOOP BEGIN at matrixmul.c(39,9)
+LOOP BEGIN at matrixmul.c(50,9)
 <Remainder loop for vectorization>
 LOOP END
 
-LOOP BEGIN at matrixmul.c(44,5)
+LOOP BEGIN at matrixmul.c(55,5)
 <Peeled loop for vectorization>
 LOOP END
 
-LOOP BEGIN at matrixmul.c(44,5)
-   remark #25420: Collapsed with loop at line 45 
+LOOP BEGIN at matrixmul.c(55,5)
+   remark #25420: Collapsed with loop at line 56 
    remark #15300: LOOP WAS VECTORIZED
 
-   LOOP BEGIN at matrixmul.c(45,9)
+   LOOP BEGIN at matrixmul.c(56,9)
       remark #25421: Loop eliminated in Collapsing 
 
    LOOP END
 LOOP END
 
-LOOP BEGIN at matrixmul.c(44,5)
+LOOP BEGIN at matrixmul.c(55,5)
 <Remainder loop for vectorization>
 LOOP END
 
-LOOP BEGIN at matrixmul.c(48,5)
-   remark #25420: Collapsed with loop at line 49 
+LOOP BEGIN at matrixmul.c(59,5)
+   remark #25420: Collapsed with loop at line 60 
    remark #25408: memset generated
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at matrixmul.c(48,5)
+   LOOP BEGIN at matrixmul.c(59,5)
       remark #15300: LOOP WAS VECTORIZED
    LOOP END
 
-   LOOP BEGIN at matrixmul.c(49,9)
+   LOOP BEGIN at matrixmul.c(60,9)
       remark #25421: Loop eliminated in Collapsing 
 
    LOOP END
 LOOP END
 
-LOOP BEGIN at matrixmul.c(58,5)
+LOOP BEGIN at matrixmul.c(69,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at matrixmul.c(58,5)
+   LOOP BEGIN at matrixmul.c(69,5)
       remark #15542: loop was not vectorized: inner loop was already vectorized
 
-      LOOP BEGIN at matrixmul.c(58,5)
+      LOOP BEGIN at matrixmul.c(69,5)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at matrixmul.c(58,5)
+         LOOP BEGIN at matrixmul.c(69,5)
             remark #25442: blocked by 125   (pre-vector) 
             remark #25440: unrolled and jammed by 4   (pre-vector) 
             remark #15542: loop was not vectorized: inner loop was already vectorized
 
-            LOOP BEGIN at matrixmul.c(59,9)
+            LOOP BEGIN at matrixmul.c(70,9)
                remark #25442: blocked by 128   (pre-vector) 
                remark #25440: unrolled and jammed by 4   (pre-vector) 
                remark #15542: loop was not vectorized: inner loop was already vectorized
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                <Peeled loop for vectorization>
                   remark #25456: Number of Array Refs Scalar Replaced In Loop: 12
                LOOP END
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                   remark #25442: blocked by 128   (pre-vector) 
                   remark #15300: LOOP WAS VECTORIZED
                   remark #25456: Number of Array Refs Scalar Replaced In Loop: 12
                LOOP END
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                <Remainder loop for vectorization>
                   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
                   remark #25456: Number of Array Refs Scalar Replaced In Loop: 12
                LOOP END
             LOOP END
 
-            LOOP BEGIN at matrixmul.c(59,9)
+            LOOP BEGIN at matrixmul.c(70,9)
             <Remainder>
                remark #15542: loop was not vectorized: inner loop was already vectorized
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                <Peeled loop for vectorization>
                   remark #25456: Number of Array Refs Scalar Replaced In Loop: 3
                LOOP END
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                   remark #15300: LOOP WAS VECTORIZED
                   remark #25456: Number of Array Refs Scalar Replaced In Loop: 3
                LOOP END
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                <Remainder loop for vectorization>
                   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
                   remark #25456: Number of Array Refs Scalar Replaced In Loop: 3
@@ -134,22 +146,22 @@ LOOP BEGIN at matrixmul.c(58,5)
             LOOP END
          LOOP END
 
-         LOOP BEGIN at matrixmul.c(58,5)
+         LOOP BEGIN at matrixmul.c(69,5)
          <Remainder>
             remark #15542: loop was not vectorized: inner loop was already vectorized
 
-            LOOP BEGIN at matrixmul.c(59,9)
+            LOOP BEGIN at matrixmul.c(70,9)
                remark #15542: loop was not vectorized: inner loop was already vectorized
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                <Peeled loop for vectorization>
                LOOP END
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                   remark #15300: LOOP WAS VECTORIZED
                LOOP END
 
-               LOOP BEGIN at matrixmul.c(60,13)
+               LOOP BEGIN at matrixmul.c(71,13)
                <Remainder loop for vectorization>
                LOOP END
             LOOP END
@@ -158,19 +170,19 @@ LOOP BEGIN at matrixmul.c(58,5)
    LOOP END
 LOOP END
 
-LOOP BEGIN at matrixmul.c(80,9)
+LOOP BEGIN at matrixmul.c(93,9)
    remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
-   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (82:17) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (84:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (95:17) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (97:13)
 
-   LOOP BEGIN at matrixmul.c(81,13)
-      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matrixmul.c(82,17) ]
+   LOOP BEGIN at matrixmul.c(94,13)
+      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ matrixmul.c(95,17) ]
    LOOP END
 LOOP END
 
     Report from: Code generation optimizations [cg]
 
-matrixmul.c(48,5):remark #34026: call to memset implemented as a call to optimized library version
-matrixmul.c(8,1):remark #34051: REGISTER ALLOCATION : [main] matrixmul.c:8
+matrixmul.c(59,5):remark #34026: call to memset implemented as a call to optimized library version
+matrixmul.c(9,1):remark #34051: REGISTER ALLOCATION : [main] matrixmul.c:9
 
     Hardware registers
         Reserved     :    2[ rsp rip]
@@ -179,19 +191,19 @@ matrixmul.c(8,1):remark #34051: REGISTER ALLOCATION : [main] matrixmul.c:8
         Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
         
     Routine temporaries
-        Total         :     483
-            Global    :     184
-            Local     :     299
-        Regenerable   :      65
-        Spilled       :      77
+        Total         :     544
+            Global    :     212
+            Local     :     332
+        Regenerable   :      59
+        Spilled       :      85
         
     Routine stack
         Variables     :      24 bytes*
-            Reads     :       8 [2.55e-08 ~ 0.0%]
-            Writes    :       4 [2.19e-08 ~ 0.0%]
-        Spills        :     808 bytes*
-            Reads     :     119 [9.03e+00 ~ 9.0%]
-            Writes    :      83 [2.35e-03 ~ 0.0%]
+            Reads     :       8 [3.87e-08 ~ 0.0%]
+            Writes    :       4 [1.94e-08 ~ 0.0%]
+        Spills        :     992 bytes*
+            Reads     :     148 [9.08e+00 ~ 9.1%]
+            Writes    :     101 [6.29e-03 ~ 0.0%]
     
     Notes
     
@@ -208,7 +220,7 @@ matrixmul.c(8,1):remark #34051: REGISTER ALLOCATION : [main] matrixmul.c:8
 Profile feedback used a statically estimated profile for the following routines:
 
   File: matrixmul.c
-        main(int, char **)[Line     8]
+        main(int, char **)[Line     9]
 
 
   0 out of 1 routine(s) used training profile data for PGO feedback
