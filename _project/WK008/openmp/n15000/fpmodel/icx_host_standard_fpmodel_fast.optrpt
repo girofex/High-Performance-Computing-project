@@ -1,0 +1,117 @@
+Global optimization report for : main
+
+LOOP BEGIN at matmul.c (20, 7)
+    remark #25567: 2 loops have been collapsed
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+LOOP END
+
+LOOP BEGIN at matmul.c (41, 4)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matmul.c (43, 7)
+        remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+        remark #25438: Loop unrolled without remainder by 8
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : main.extracted
+
+LOOP BEGIN at matmul.c (27, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+
+    LOOP BEGIN at matmul.c (29, 7)
+        remark #15319: Loop was not vectorized: novector directive used
+
+        LOOP BEGIN at matmul.c (30, 10)
+            remark #15319: Loop was not vectorized: novector directive used
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at matmul.c (27, 4)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at matmul.c (29, 7)
+    <Multiversioned v1>
+        remark: OpenMP: Outlined parallel loop
+        remark #25228: Loop multiversioned for Data Dependence
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at matmul.c (30, 10)
+            remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at matmul.c (27, 4)
+                remark #25566: blocked by 64
+                remark #25540: Loop unrolled and jammed by 4
+                remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at matmul.c (29, 7)
+                    remark #25566: blocked by 64
+                    remark #25540: Loop unrolled and jammed by 4
+                    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                    LOOP BEGIN at matmul.c (30, 10)
+                        remark #25566: blocked by 64
+                        remark #25563: Load hoisted out of the loop
+                        remark #15300: LOOP WAS VECTORIZED
+                        remark #15305: vectorization support: vector length 4
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 36
+                    LOOP END
+
+                    LOOP BEGIN at matmul.c (30, 10)
+                    <Remainder loop for vectorization>
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 36
+                    LOOP END
+                LOOP END
+            LOOP END
+
+            LOOP BEGIN at matmul.c (27, 4)
+            <Remainder loop>
+                remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at matmul.c (29, 7)
+                    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                    LOOP BEGIN at matmul.c (30, 10)
+                        remark #15300: LOOP WAS VECTORIZED
+                        remark #15305: vectorization support: vector length 4
+                    LOOP END
+
+                    LOOP BEGIN at matmul.c (30, 10)
+                    <Remainder loop for vectorization>
+                    LOOP END
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: fwrite
+
+DEAD STATIC FUNC: llvm.directive.region.entry
+
+DEAD STATIC FUNC: llvm.directive.region.exit
+
+COMPILE FUNC: main
+   -> DELETE: malloc matmul.c (17,21)
+   -> DELETE: llvm.directive.region.entry matmul.c (27,4)
+   -> DELETE: llvm.directive.region.exit matmul.c (27,4)
+   -> DELETE: fprintf matmul.c (47,7)
+   -> DELETE: fprintf matmul.c (45,10)
+   -> DELETE: fputc matmul.c (47,7)
+
+COMPILE FUNC: main.extracted
+   -> llvm.smin.i64 matmul.c
+
+---- End Inlining Report ------
