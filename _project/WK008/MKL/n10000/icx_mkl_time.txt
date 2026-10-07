@@ -1,0 +1,49 @@
+
+ This example computes real matrix C=alpha*A*B+beta*C using 
+ Intel(R) MKL function dgemm, where A, B, and  C are matrices and 
+ alpha and beta are double precision scalars
+
+ Initializing data for matrix multiplication C=A*B for matrix 
+ A(10000x10000) and matrix B(10000x10000)
+
+ Allocating memory for matrices aligned on 64-byte boundary for better 
+ performance 
+
+ Intializing matrix data 
+
+ Computing matrix product using Intel(R) MKL dgemm function via CBLAS interface 
+
+ == Matrix multiplication using Intel(R) MKL dgemm completed == 
+ == at 3921.11715 milliseconds == 
+
+
+ Computations completed.
+
+ Top left corner of matrix A: 
+           2           2           2           2           2           2
+           2           2           2           2           2           2
+           2           2           2           2           2           2
+           2           2           2           2           2           2
+           2           2           2           2           2           2
+           2           2           2           2           2           2
+
+ Top left corner of matrix B: 
+           3           3           3           3           3           3
+           3           3           3           3           3           3
+           3           3           3           3           3           3
+           3           3           3           3           3           3
+           3           3           3           3           3           3
+           3           3           3           3           3           3
+
+ Top left corner of matrix C: 
+       60000       60000       60000       60000       60000       60000
+       60000       60000       60000       60000       60000       60000
+       60000       60000       60000       60000       60000       60000
+       60000       60000       60000       60000       60000       60000
+       60000       60000       60000       60000       60000       60000
+       60000       60000       60000       60000       60000       60000
+
+ Deallocating memory 
+
+ Example completed. 
+
