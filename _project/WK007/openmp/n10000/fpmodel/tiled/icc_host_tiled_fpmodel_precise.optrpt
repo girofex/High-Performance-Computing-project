@@ -115,9 +115,9 @@ matmul_tiled.c(12,1):remark #34051: REGISTER ALLOCATION : [main] matmul_tiled.c:
         Spilled       :      37
         
     Routine stack
-        Variables     :      72 bytes*
-            Reads     :      10 [9.03e-08 ~ 0.0%]
-            Writes    :      12 [4.20e-07 ~ 0.0%]
+        Variables     :      68 bytes*
+            Reads     :       8 [9.03e-08 ~ 0.0%]
+            Writes    :      10 [4.20e-07 ~ 0.0%]
         Spills        :     336 bytes*
             Reads     :      59 [4.84e-01 ~ 0.5%]
             Writes    :      47 [9.47e-02 ~ 0.1%]
