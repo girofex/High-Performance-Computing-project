@@ -66,35 +66,31 @@ LOOP BEGIN at matmul_tiled.c(58,5)
    LOOP END
 LOOP END
 
-LOOP BEGIN at matmul_tiled.c(44,47)
+LOOP BEGIN at matmul_tiled.c(31,5)
    remark #15542: loop was not vectorized: inner loop was already vectorized
 
-   LOOP BEGIN at matmul_tiled.c(31,5)
+   LOOP BEGIN at matmul_tiled.c(34,9)
       remark #15542: loop was not vectorized: inner loop was already vectorized
 
-      LOOP BEGIN at matmul_tiled.c(34,9)
+      LOOP BEGIN at matmul_tiled.c(37,13)
          remark #15542: loop was not vectorized: inner loop was already vectorized
 
-         LOOP BEGIN at matmul_tiled.c(37,13)
+         LOOP BEGIN at matmul_tiled.c(40,17)
             remark #15542: loop was not vectorized: inner loop was already vectorized
 
-            LOOP BEGIN at matmul_tiled.c(40,17)
+            LOOP BEGIN at matmul_tiled.c(41,21)
                remark #15542: loop was not vectorized: inner loop was already vectorized
 
-               LOOP BEGIN at matmul_tiled.c(41,21)
-                  remark #15542: loop was not vectorized: inner loop was already vectorized
+               LOOP BEGIN at matmul_tiled.c(43,25)
+               <Peeled loop for vectorization>
+               LOOP END
 
-                  LOOP BEGIN at matmul_tiled.c(43,25)
-                  <Peeled loop for vectorization>
-                  LOOP END
+               LOOP BEGIN at matmul_tiled.c(43,25)
+                  remark #15300: LOOP WAS VECTORIZED
+               LOOP END
 
-                  LOOP BEGIN at matmul_tiled.c(43,25)
-                     remark #15300: LOOP WAS VECTORIZED
-                  LOOP END
-
-                  LOOP BEGIN at matmul_tiled.c(43,25)
-                  <Remainder loop for vectorization>
-                  LOOP END
+               LOOP BEGIN at matmul_tiled.c(43,25)
+               <Remainder loop for vectorization>
                LOOP END
             LOOP END
          LOOP END
@@ -113,19 +109,19 @@ matmul_tiled.c(12,1):remark #34051: REGISTER ALLOCATION : [main] matmul_tiled.c:
         Assigned     :   17[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm2]
         
     Routine temporaries
-        Total         :     300
-            Global    :     107
-            Local     :     193
-        Regenerable   :     114
-        Spilled       :      39
+        Total         :     292
+            Global    :     101
+            Local     :     191
+        Regenerable   :     109
+        Spilled       :      37
         
     Routine stack
         Variables     :      72 bytes*
-            Reads     :      10 [5.21e-07 ~ 0.0%]
+            Reads     :      10 [3.59e-07 ~ 0.0%]
             Writes    :      12 [5.97e-07 ~ 0.0%]
-        Spills        :     352 bytes*
-            Reads     :      62 [5.03e-01 ~ 0.5%]
-            Writes    :      49 [9.66e-02 ~ 0.1%]
+        Spills        :     336 bytes*
+            Reads     :      60 [4.86e-01 ~ 0.5%]
+            Writes    :      47 [9.42e-02 ~ 0.1%]
     
     Notes
     

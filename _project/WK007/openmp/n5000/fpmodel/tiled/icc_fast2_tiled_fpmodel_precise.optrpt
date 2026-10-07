@@ -10,8 +10,8 @@ INLINING OPTION VALUES:
   -inline-min-size: 30
   -inline-max-size: 230
   -inline-max-total-size: 2000
-  -inline-max-per-routine: 10000
-  -inline-max-per-compile: 500000
+  -inline-max-per-routine: disabled
+  -inline-max-per-compile: disabled
 
 
 Begin optimization report for: main(int, char **)
@@ -48,12 +48,12 @@ LOOP BEGIN at matmul_tiled.c(22,5)
    LOOP END
 
    LOOP BEGIN at matmul_tiled.c(23,9)
-   <Alternate Alignment Vectorized Loop>
+   <Remainder loop for vectorization>
+      remark #15301: REMAINDER LOOP WAS VECTORIZED
    LOOP END
 
    LOOP BEGIN at matmul_tiled.c(23,9)
    <Remainder loop for vectorization>
-      remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
    LOOP END
 LOOP END
 
@@ -90,12 +90,7 @@ LOOP BEGIN at matmul_tiled.c(31,5)
                LOOP END
 
                LOOP BEGIN at matmul_tiled.c(43,25)
-               <Alternate Alignment Vectorized Loop>
-               LOOP END
-
-               LOOP BEGIN at matmul_tiled.c(43,25)
                <Remainder loop for vectorization>
-                  remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
                LOOP END
             LOOP END
          LOOP END
@@ -111,22 +106,22 @@ matmul_tiled.c(12,1):remark #34051: REGISTER ALLOCATION : [main] matmul_tiled.c:
         Reserved     :    2[ rsp rip]
         Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
         Callee-save  :    6[ rbx rbp r12-r15]
-        Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
+        Assigned     :   17[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm2]
         
     Routine temporaries
-        Total         :     318
-            Global    :     107
-            Local     :     211
+        Total         :     292
+            Global    :     102
+            Local     :     190
         Regenerable   :     109
-        Spilled       :      33
+        Spilled       :      38
         
     Routine stack
-        Variables     :      72 bytes*
-            Reads     :      10 [2.52e-07 ~ 0.0%]
-            Writes    :      12 [4.19e-07 ~ 0.0%]
-        Spills        :     304 bytes*
-            Reads     :      56 [2.20e-01 ~ 0.2%]
-            Writes    :      43 [4.70e-02 ~ 0.0%]
+        Variables     :      68 bytes*
+            Reads     :       7 [2.69e-07 ~ 0.0%]
+            Writes    :      10 [5.97e-07 ~ 0.0%]
+        Spills        :     344 bytes*
+            Reads     :      61 [4.86e-01 ~ 0.5%]
+            Writes    :      48 [9.42e-02 ~ 0.1%]
     
     Notes
     
@@ -143,3 +138,21 @@ Begin optimization report for: min_int(int, int)
 DEAD STATIC FUNCTION: (min_int(int, int)) matmul_tiled.c(9,41)
 
 ===========================================================================
+
+    Report from: Profile guided optimizations [pgo]
+
+
+
+Profile feedback used a statically estimated profile for the following routines:
+
+  File: matmul_tiled.c
+        main(int, char **)[Line    12]
+
+
+  0 out of 1 routine(s) used training profile data for PGO feedback
+  0 out of 1 routine(s) were unable to use training profile data for PGO feedback
+  0 out of 1 routine(s) were unable to find training profile data for PGO feedback
+  1 out of 1 routine(s) used a static estimate profile for PGO feedback
+
+
+

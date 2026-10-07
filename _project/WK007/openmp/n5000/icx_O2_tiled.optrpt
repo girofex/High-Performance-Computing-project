@@ -19,38 +19,35 @@ LOOP END
 Global optimization report for : main.extracted
 
 LOOP BEGIN at matmul_tiled.c (30, 5)
+    remark: OpenMP: Outlined parallel loop
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-    LOOP BEGIN at matmul_tiled.c (30, 5)
-        remark: OpenMP: Outlined parallel loop
+    LOOP BEGIN at matmul_tiled.c (34, 9)
         remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-        LOOP BEGIN at matmul_tiled.c (34, 9)
+        LOOP BEGIN at matmul_tiled.c (37, 13)
             remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-            LOOP BEGIN at matmul_tiled.c (37, 13)
+            LOOP BEGIN at matmul_tiled.c (40, 17)
                 remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-                LOOP BEGIN at matmul_tiled.c (40, 17)
+                LOOP BEGIN at matmul_tiled.c (41, 21)
                     remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-                    LOOP BEGIN at matmul_tiled.c (41, 21)
-                        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+                    LOOP BEGIN at matmul_tiled.c (43, 25)
+                    <Multiversioned v2>
+                        remark #15319: Loop was not vectorized: novector directive used
+                    LOOP END
 
-                        LOOP BEGIN at matmul_tiled.c (43, 25)
-                        <Multiversioned v2>
-                            remark #15319: Loop was not vectorized: novector directive used
-                        LOOP END
+                    LOOP BEGIN at matmul_tiled.c (43, 25)
+                    <Multiversioned v1>
+                        remark #25228: Loop multiversioned for Data Dependence
+                        remark #15300: LOOP WAS VECTORIZED
+                        remark #15305: vectorization support: vector length 2
+                    LOOP END
 
-                        LOOP BEGIN at matmul_tiled.c (43, 25)
-                        <Multiversioned v1>
-                            remark #25228: Loop multiversioned for Data Dependence
-                            remark #15300: LOOP WAS VECTORIZED
-                            remark #15305: vectorization support: vector length 2
-                        LOOP END
-
-                        LOOP BEGIN at matmul_tiled.c (43, 25)
-                        <Remainder loop for vectorization>
-                        LOOP END
+                    LOOP BEGIN at matmul_tiled.c (43, 25)
+                    <Remainder loop for vectorization>
                     LOOP END
                 LOOP END
             LOOP END
