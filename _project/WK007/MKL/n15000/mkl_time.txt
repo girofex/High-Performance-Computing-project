@@ -1,23 +1,4 @@
-
- This example computes real matrix C=alpha*A*B+beta*C using 
- Intel(R) MKL function dgemm, where A, B, and  C are matrices and 
- alpha and beta are double precision scalars
-
- Initializing data for matrix multiplication C=A*B for matrix 
- A(15000x15000) and matrix B(15000x15000)
-
- Allocating memory for matrices aligned on 64-byte boundary for better 
- performance 
-
- Intializing matrix data 
-
- Computing matrix product using Intel(R) MKL dgemm function via CBLAS interface 
-
- == Matrix multiplication using Intel(R) MKL dgemm completed == 
- == at 12948.48903 milliseconds == 
-
-
- Computations completed.
+ Time: 12852.47499 milliseconds 
 
  Top left corner of matrix A: 
            2           2           2           2           2           2
@@ -42,8 +23,3 @@
        90000       90000       90000       90000       90000       90000
        90000       90000       90000       90000       90000       90000
        90000       90000       90000       90000       90000       90000
-
- Deallocating memory 
-
- Example completed. 
-
