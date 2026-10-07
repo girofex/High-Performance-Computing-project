@@ -1,0 +1,1577 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - Callee:          __kmpc_for_static_init_4
+  - String:          ' will not be inlined into '
+  - Caller:          main.extracted
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - Callee:          __kmpc_for_static_fini
+  - String:          ' will not be inlined into '
+  - Caller:          main.extracted
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - Callee:          __kmpc_for_static_init_4
+  - String:          ' will not be inlined into '
+  - Caller:          main.extracted
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - Callee:          __kmpc_for_static_fini
+  - String:          ' will not be inlined into '
+  - Caller:          main.extracted
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 16, Column: 13 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 18, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 19, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 20, Column: 22 }
+Function:        main
+Args:
+  - Callee:          calloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main
+Args:
+  - Callee:          __kmpc_fork_call
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 47, Column: 15 }
+Function:        main
+Args:
+  - Callee:          fopen
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 48, Column: 15 }
+Function:        main
+Args:
+  - Callee:          perror
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 50, Column: 5 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 56, Column: 5 }
+Function:        main
+Args:
+  - Callee:          fclose
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 58, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 58, Column: 14 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 58, Column: 23 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 60, Column: 11 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 61, Column: 5 }
+Function:        main
+Args:
+  - Callee:          printf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 54, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 53, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 16, Column: 13 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 18, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 19, Column: 22 }
+Function:        main
+Args:
+  - Callee:          malloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 20, Column: 22 }
+Function:        main
+Args:
+  - Callee:          calloc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main
+Args:
+  - Callee:          __kmpc_fork_call
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 47, Column: 15 }
+Function:        main
+Args:
+  - Callee:          fopen
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 48, Column: 15 }
+Function:        main
+Args:
+  - Callee:          perror
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 50, Column: 5 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 56, Column: 5 }
+Function:        main
+Args:
+  - Callee:          fclose
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 58, Column: 5 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 58, Column: 14 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 58, Column: 23 }
+Function:        main
+Args:
+  - Callee:          free
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 60, Column: 11 }
+Function:        main
+Args:
+  - Callee:          omp_get_wtime
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 61, Column: 5 }
+Function:        main
+Args:
+  - Callee:          printf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 54, Column: 9 }
+Function:        main
+Args:
+  - Callee:          fputc
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: matmul_tiled.c, Line: 53, Column: 13 }
+Function:        main
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            PartialUnrolled
+DebugLoc:        { File: matmul_tiled.c, Line: 23, Column: 9 }
+Function:        main
+Args:
+  - String:          'unrolled loop by a factor of '
+  - UnrollCount:     '12'
+...
+--- !Passed
+Pass:            TTI
+Name:            DontUnroll
+DebugLoc:        { File: matmul_tiled.c, Line: 51, Column: 5 }
+Function:        main
+Args:
+  - String:          'advising against unrolling the loop because it contains a '
+  - Call:            call
+    DebugLoc:        { File: matmul_tiled.c, Line: 53, Column: 13 }
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            VectorizedHorizontalReduction
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 37 }
+Function:        main.extracted
+Args:
+  - String:          'Vectorized horizontal reduction with cost '
+  - Cost:            '-9'
+  - String:          ' and with tree size '
+  - TreeSize:        '4'
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            VectorizedList
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'SLP vectorized with cost '
+  - Cost:            '-3'
+  - String:          ' and with tree size '
+  - TreeSize:        '4'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: matmul_tiled.c, Line: 9, Column: 52 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 52, Column: 9 }
+Function:        main
+Args:
+  - NumVRCopies:     '8'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.710176e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 51, Column: 5 }
+Function:        main
+Args:
+  - NumVRCopies:     '9'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.740294e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 23, Column: 9 }
+Function:        main
+Args:
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '2.132353e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 11, Column: 1 }
+Function:        main
+Args:
+  - NumSpills:       '4'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.000000e+00'
+  - String:          ' total spills cost '
+  - NumReloads:      '6'
+  - String:          ' reloads '
+  - TotalReloadsCost: '5.823529e+00'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '9.411765e-01'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '22'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.772441e+03'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+Function:        main
+Args:
+  - NumStackBytes:   '8824'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '43'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 23, Column: 23 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 16, Column: 13 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 25, Column: 21 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 24, Column: 21 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 25, Column: 21 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 22, Column: 5 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 47, Column: 15 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 53, Column: 33 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '43'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 54, Column: 9 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 56, Column: 5 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 64, Column: 1 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 48, Column: 15 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: matmul_tiled.c, Line: 12, Column: 0 }
+Function:        main
+Args:
+  - NumInstructions: '220'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 38, Column: 21 }
+Function:        main.extracted
+Args:
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '5.242879e+05'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '5.242879e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.864319e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 37, Column: 17 }
+Function:        main.extracted
+Args:
+  - NumSpills:       '1'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.553594e+04'
+  - String:          ' total spills cost '
+  - NumReloads:      '8'
+  - String:          ' reloads '
+  - TotalReloadsCost: '8.519675e+05'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '4'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '6.553598e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.864319e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 38, Column: 21 }
+Function:        main.extracted
+Args:
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '5.242879e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.864319e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 37, Column: 17 }
+Function:        main.extracted
+Args:
+  - NumSpills:       '1'
+  - String:          ' spills '
+  - TotalSpillsCost: '6.553594e+04'
+  - String:          ' total spills cost '
+  - NumReloads:      '6'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.621436e+05'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '4'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '6.553598e+05'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '7.864319e+05'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 35, Column: 13 }
+Function:        main.extracted
+Args:
+  - NumSpills:       '10'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.658874e+05'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '6'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.686362e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '23'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.155070e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '14'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.335295e+06'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '5'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.576960e+06'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 33, Column: 9 }
+Function:        main.extracted
+Args:
+  - NumSpills:       '15'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.676791e+05'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '9'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.814344e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '27'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.156350e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '14'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.335295e+06'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '5'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.576960e+06'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - NumSpills:       '20'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.677588e+05'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '10'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.815938e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '31'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.156414e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '15'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.335311e+06'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '6'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.576976e+06'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 1 }
+Function:        main.extracted
+Args:
+  - NumSpills:       '28'
+  - String:          ' spills '
+  - TotalSpillsCost: '1.677658e+05'
+  - String:          ' total spills cost '
+  - NumFoldedSpills: '11'
+  - String:          ' folded spills '
+  - TotalFoldedSpillsCost: '3.815988e+04'
+  - String:          ' total folded spills cost '
+  - NumReloads:      '35'
+  - String:          ' reloads '
+  - TotalReloadsCost: '1.156416e+06'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '15'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '1.335311e+06'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '6'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.576976e+06'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 0 }
+Function:        main.extracted
+Args:
+  - NumStackBytes:   '280'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '34'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '12'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '16'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '19'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 37, Column: 32 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '12'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 37, Column: 17 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 37, Column: 17 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 38, Column: 21 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 40, Column: 40 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 39, Column: 39 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '29'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 45 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '13'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 5 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '13'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 37, Column: 17 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 38, Column: 21 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 40, Column: 40 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '31'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 45 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '13'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: matmul_tiled.c, Line: 41, Column: 47 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: matmul_tiled.c, Line: 29, Column: 0 }
+Function:        main.extracted
+Args:
+  - NumInstructions: '361'
+  - String:          ' instructions in function'
+...

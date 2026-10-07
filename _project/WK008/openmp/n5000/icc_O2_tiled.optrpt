@@ -102,14 +102,6 @@ LOOP BEGIN at matmul_tiled.c(31,5)
    LOOP END
 LOOP END
 
-
-Non-optimizable loops:
-
-
-LOOP BEGIN at matmul_tiled.c(31,5)
-   remark #15543: loop was not vectorized: loop with function call not considered an optimization candidate.
-LOOP END
-
     Report from: Code generation optimizations [cg]
 
 matmul_tiled.c(12,1):remark #34051: REGISTER ALLOCATION : [main] matmul_tiled.c:12
@@ -121,18 +113,18 @@ matmul_tiled.c(12,1):remark #34051: REGISTER ALLOCATION : [main] matmul_tiled.c:
         Assigned     :   20[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm5]
         
     Routine temporaries
-        Total         :     324
-            Global    :     111
-            Local     :     213
-        Regenerable   :     114
+        Total         :     318
+            Global    :     107
+            Local     :     211
+        Regenerable   :     109
         Spilled       :      33
         
     Routine stack
         Variables     :      72 bytes*
-            Reads     :      10 [3.66e-07 ~ 0.0%]
+            Reads     :      10 [2.52e-07 ~ 0.0%]
             Writes    :      12 [4.19e-07 ~ 0.0%]
         Spills        :     304 bytes*
-            Reads     :      57 [2.20e-01 ~ 0.2%]
+            Reads     :      56 [2.20e-01 ~ 0.2%]
             Writes    :      43 [4.70e-02 ~ 0.0%]
     
     Notes

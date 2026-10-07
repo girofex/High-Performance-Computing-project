@@ -27,7 +27,7 @@ int main(int argc, char **argv)
         }
 
     #pragma omp parallel for default(none) shared(a,b,c) \
-        private(i,k,j,ii,kk,jj) schedule(dynamic)
+        private(i,k,j,ii,kk,jj)
     for (ii = 0; ii < n; ii += BLOCK_SIZE) {
         int i_max = min_int(ii + BLOCK_SIZE, n);
         for (kk = 0; kk < n; kk += BLOCK_SIZE) {

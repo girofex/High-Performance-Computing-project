@@ -19,45 +19,42 @@ LOOP END
 Global optimization report for : main.extracted
 
 LOOP BEGIN at matmul_tiled.c (29, 5)
+    remark: OpenMP: Outlined parallel loop
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-    LOOP BEGIN at matmul_tiled.c (29, 5)
-        remark: OpenMP: Outlined parallel loop
+    LOOP BEGIN at matmul_tiled.c (33, 9)
         remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-        LOOP BEGIN at matmul_tiled.c (33, 9)
+        LOOP BEGIN at matmul_tiled.c (35, 13)
+        <Predicate Optimized v1>
+            remark #25423: Invariant If condition at line 38 hoisted out of this loop
             remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-            LOOP BEGIN at matmul_tiled.c (35, 13)
-            <Predicate Optimized v1>
-                remark #25423: Invariant If condition at line 38 hoisted out of this loop
+            LOOP BEGIN at matmul_tiled.c (37, 17)
                 remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-                LOOP BEGIN at matmul_tiled.c (37, 17)
+                LOOP BEGIN at matmul_tiled.c (38, 21)
+                    remark #25540: Loop unrolled and jammed by 8
                     remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
 
-                    LOOP BEGIN at matmul_tiled.c (38, 21)
-                        remark #25540: Loop unrolled and jammed by 8
-                        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+                    LOOP BEGIN at matmul_tiled.c (40, 25)
+                        remark #15300: LOOP WAS VECTORIZED
+                        remark #15305: vectorization support: vector length 4
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
+                    LOOP END
 
-                        LOOP BEGIN at matmul_tiled.c (40, 25)
-                            remark #15300: LOOP WAS VECTORIZED
-                            remark #15305: vectorization support: vector length 4
-                            remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
-                        LOOP END
-
-                        LOOP BEGIN at matmul_tiled.c (40, 25)
-                        <Remainder loop for vectorization>
-                            remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
-                        LOOP END
+                    LOOP BEGIN at matmul_tiled.c (40, 25)
+                    <Remainder loop for vectorization>
+                        remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
                     LOOP END
                 LOOP END
             LOOP END
+        LOOP END
 
-            LOOP BEGIN at matmul_tiled.c (35, 13)
-            <Predicate Optimized v2>
+        LOOP BEGIN at matmul_tiled.c (35, 13)
+        <Predicate Optimized v2>
 
-                LOOP BEGIN at matmul_tiled.c (37, 17)
-                LOOP END
+            LOOP BEGIN at matmul_tiled.c (37, 17)
             LOOP END
         LOOP END
     LOOP END
