@@ -1,0 +1,3 @@
+Result example: c[0][0] = 30000.000000
+Time to calculate results (kernel only): 1118.082275 ms.
+Total time with I/O (H2D and D2H copies): 1255.538818 ms.
